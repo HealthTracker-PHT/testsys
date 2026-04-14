@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ชื่อคลินิกของคุณ] | [สโลแกนคลินิก]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+        }
+        .nav-blur {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
+                        [ชื่อคลินิก/โลโก้]
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-blue-700 transition">หน้าแรก</a>
+                    <a href="#services" class="hover:text-blue-700 transition">บริการของเรา</a>
+                    <a href="#about" class="hover:text-blue-700 transition">เกี่ยวกับเรา</a>
+                    <a href="#reviews" class="hover:text-blue-700 transition">รีวิว</a>
+                    <a href="#contact" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">ติดต่อเรา</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 py-4 space-y-2">
+            <a href="#home" class="block py-2 hover:bg-gray-50">หน้าแรก</a>
+            <a href="#services" class="block py-2 hover:bg-gray-50">บริการของเรา</a>
+            <a href="#about" class="block py-2 hover:bg-gray-50">เกี่ยวกับเรา</a>
+            <a href="#reviews" class="block py-2 hover:bg-gray-50">รีวิว</a>
+            <a href="#contact" class="block py-2 text-blue-900 font-bold">ติดต่อเรา</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-blue-900">
+                        [หัวข้อหลักของเว็บไซต์] <br>
+                        <span class="text-blue-600">[คำขยายความ/สโลแกน]</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        [คำบรรยายรายละเอียดเบื้องต้นของคลินิกและจุดเด่นของคุณ]
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-blue-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-blue-800 transition shadow-lg flex items-center gap-2">
+                            <i data-lucide="calendar"></i>
+                            [ปุ่มนัดหมาย/ติดต่อ]
+                        </a>
+                        <a href="#services" class="border border-blue-900 text-blue-900 px-8 py-4 rounded-xl font-medium hover:bg-blue-50 transition">
+                            [ปุ่มดูบริการ]
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="w-full h-[400px] md:h-[500px] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl relative">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500 italic">
+                            [รูปภาพหน้าปกคลินิก]
+                        </div>
+                    </div>
+                    <!-- Stats Floating Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl hidden lg:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">[หัวข้อสถิติ]</p>
+                                <p class="text-xl font-bold">[ตัวเลขสถิติ/ความสำเร็จ]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">[หัวข้อส่วนบริการ]</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600">[คำเกริ่นนำเกี่ยวกับบริการต่างๆ]</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group p-8 bg-gray-50 rounded-3xl hover:bg-blue-900 hover:text-white transition duration-300 shadow-sm hover:shadow-xl">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-md text-blue-900 group-hover:bg-blue-800 group-hover:text-white">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">[ชื่อบริการที่ 1]</h3>
+                    <p class="text-gray-600 group-hover:text-blue-100 mb-6">
+                        [คำอธิบายรายละเอียดบริการที่ 1]
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 font-medium text-blue-700 group-hover:text-white">
+                        [ลิงก์อ่านเพิ่ม] <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group p-8 bg-gray-50 rounded-3xl hover:bg-blue-900 hover:text-white transition duration-300 shadow-sm hover:shadow-xl">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-md text-blue-900 group-hover:bg-blue-800 group-hover:text-white">
+                        <i data-lucide="droplet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">[ชื่อบริการที่ 2]</h3>
+                    <p class="text-gray-600 group-hover:text-blue-100 mb-6">
+                        [คำอธิบายรายละเอียดบริการที่ 2]
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 font-medium text-blue-700 group-hover:text-white">
+                        [ลิงก์อ่านเพิ่ม] <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group p-8 bg-gray-50 rounded-3xl hover:bg-blue-900 hover:text-white transition duration-300 shadow-sm hover:shadow-xl">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-md text-blue-900 group-hover:bg-blue-800 group-hover:text-white">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">[ชื่อบริการที่ 3]</h3>
+                    <p class="text-gray-600 group-hover:text-blue-100 mb-6">
+                        [คำอธิบายรายละเอียดบริการที่ 3]
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 font-medium text-blue-700 group-hover:text-white">
+                        [ลิงก์อ่านเพิ่ม] <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="w-full aspect-[3/4] bg-gray-300 rounded-3xl overflow-hidden shadow-2xl">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-500 italic">
+                                [รูปภาพแพทย์/คลินิก]
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 bg-blue-900 text-white p-8 rounded-3xl shadow-2xl">
+                            <p class="text-3xl font-bold mb-1">[ตัวเลข]</p>
+                            <p class="text-sm opacity-80 uppercase tracking-widest">[หัวข้อประสบการณ์]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-blue-600 font-bold tracking-widest uppercase mb-4 block">[หัวข้อหมวดหมู่]</span>
+                    <h2 class="text-4xl font-bold text-blue-900 mb-6">[หัวข้อเรื่องราวของเรา/แพทย์]</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        [เนื้อหาคำบรรยายรายละเอียดเกี่ยวกับคลินิก ประวัติ และวิสัยทัศน์]
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-green-500"></i>
+                            <span>[จุดเด่นที่ 1]</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-green-500"></i>
+                            <span>[จุดเด่นที่ 2]</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-green-500"></i>
+                            <span>[จุดเด่นที่ 3]</span>
+                        </li>
+                    </ul>
+                    <button class="bg-blue-900 text-white px-10 py-4 rounded-xl hover:bg-blue-800 transition shadow-lg">
+                        [ปุ่มรายละเอียดเพิ่มเติม]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">[หัวข้อรีวิว]</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review Card -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"[ข้อความรีวิวจากลูกค้าคนที่ 1]"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 font-bold uppercase text-sm">
+                            [A]
+                        </div>
+                        <div>
+                            <p class="font-bold">[ชื่อผู้รีวิวที่ 1]</p>
+                            <p class="text-xs text-gray-500 italic">[ตำแหน่ง/บริการที่ใช้]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"[ข้อความรีวิวจากลูกค้าคนที่ 2]"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 font-bold uppercase text-sm">
+                            [B]
+                        </div>
+                        <div>
+                            <p class="font-bold">[ชื่อผู้รีวิวที่ 2]</p>
+                            <p class="text-xs text-gray-500 italic">[ตำแหน่ง/บริการที่ใช้]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"[ข้อความรีวิวจากลูกค้าคนที่ 3]"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 font-bold uppercase text-sm">
+                            [C]
+                        </div>
+                        <div>
+                            <p class="font-bold">[ชื่อผู้รีวิวที่ 3]</p>
+                            <p class="text-xs text-gray-500 italic">[ตำแหน่ง/บริการที่ใช้]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-blue-950 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">[ชื่อคลินิก]</h3>
+                    <p class="text-blue-200 mb-8 leading-relaxed">
+                        [คำบรรยายสรุปเกี่ยวกับคลินิก]
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-700 transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-700 transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-700 transition">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">[หัวข้อข้อมูลติดต่อ]</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-400 shrink-0"></i>
+                            <span>[ที่อยู่ของคลินิก]</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-blue-400"></i>
+                            <span>[เบอร์โทรศัพท์ติดต่อ]</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-400"></i>
+                            <span>[อีเมลติดต่อ]</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-blue-400"></i>
+                            <span>[เวลาเปิด-ปิดทำการ]</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">[หัวข้อช่องทางการติดต่อ]</h4>
+                    <div class="space-y-4">
+                        <!-- LINE Contact -->
+                        <a href="#" class="flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl transition">
+                            <div class="bg-white/20 p-2 rounded-lg">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs opacity-80">[ชื่อปุ่ม LINE]</span>
+                                <span class="font-bold">[ไอดี LINE / ลิงก์]</span>
+                            </div>
+                        </a>
+                        <!-- Phone Contact -->
+                        <a href="tel:#" class="flex items-center gap-4 bg-white text-blue-950 p-4 rounded-xl hover:bg-gray-100 transition">
+                            <div class="bg-blue-100 p-2 rounded-lg">
+                                <i data-lucide="phone-call" class="w-6 h-6 text-blue-900"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500">[ชื่อปุ่มโทรศัพท์]</span>
+                                <span class="font-bold text-blue-900">[หมายเลขโทรศัพท์]</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-900 pt-8 text-center text-sm text-blue-400">
+                <p>&copy; 2024 [ชื่อคลินิก]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) nav.classList.add('shadow-md');
+            else nav.classList.remove('shadow-md');
+        });
+    </script>
+</body>
+</html>
